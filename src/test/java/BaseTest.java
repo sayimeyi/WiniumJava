@@ -27,13 +27,13 @@ public class BaseTest {
 		driverPath = "W:\\Users\\rsingh\\eclipse-workspace\\WiniumJava\\vendor\\driver\\Winium.Desktop.Driver.exe";
 		System.setProperty("webdriver.winium.driver.desktop", driverPath);
 		options.setApplicationPath("C:\\Windows\\System32\\notepad.exe");
-		service = new Builder().usingDriverExecutable(new File(driverPath)).usingPort(8080).withVerbose(true)
+		service = new Builder().usingDriverExecutable(new File(driverPath)).usingPort(9999).withVerbose(true)
 				.withSilent(false).buildDesktopService();
 	}
 
 	@BeforeSuite
 	public void setUp() {
-		WindowsUtils.killByName("Winium.Desktop.Driver.exe");
+
 	}
 
 	@AfterClass

@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.winium.WiniumDriver;
 import org.testng.annotations.Test;
 
@@ -20,6 +21,6 @@ public class TestOne extends BaseTest {
 
 	@Test
 	public void openNotepad() {
-		System.out.println(driver.getTitle());
+		System.out.println(driver.findElement(By.className("Notepad2U")).getAttribute("Name"));
 	}
 }
